@@ -43,22 +43,45 @@ body {
 
 /* Styling the button */
 .pretty-button {
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    padding: 15px 32px;
+    background-color: #C0A060; /* Gold background to match the flyer */
+    color: #000; /* Dark text for contrast */
+    padding: 20px 40px; /* Larger padding for a bigger button */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px; /* Larger font size for the button text */
+    font-family: 'Dancing Script', cursive; /* A font similar to the one used in the flyer */
     margin: 4px 2px;
     cursor: pointer;
-    border: none;
+    border: 2px solid #fff; /* Adding a white border for elegance */
     border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase; /* Stylistic choice to match flyer's emphasis */
 }
 
 .pretty-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    background-color: #D0B070; /* A lighter gold on hover for interaction */
+    color: #000;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Pseudo-elements for additional effects */
+.pretty-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #DAA520, #FFD700, #C0A060); /* Gradient with various shades of gold */
+    transition: all 0.4s;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.pretty-button:hover::before {
+    left: 100%;
 }
