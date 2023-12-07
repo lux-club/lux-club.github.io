@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000; /* Light grey background */
+    font-family: Arial, sans-serif;
+}
+
+.background-container {
+    /* Full height of the viewport */
+    height: 100vh;
+
+    /* Background image settings */
+    background-image: url('lux.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+
+    /* Optional: Add a blur effect to the background */
+    filter: blur(5px);
+}
+
+/* Optional: To prevent content inside the container from being blurred */
+.content {
+   text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional CSS to make the overlaying content visible */
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+/* Styling the button */
+.pretty-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition-duration: 0.4s;
+}
+
+.pretty-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+}
