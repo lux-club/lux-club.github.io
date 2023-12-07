@@ -1,33 +1,32 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background-color: #000000; /* Light grey background */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('lux.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+.content {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000; /* Light grey background */
-    font-family: Arial, sans-serif;
-}
-
-.background-container {
-    /* Full height of the viewport */
-    height: 100vh;
-
-    /* Background image settings */
-    background-image: url('lux.jpg');
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-
-    /* Optional: Add a blur effect to the background */
-    filter: blur(5px);
-}
-
-/* Optional: To prevent content inside the container from being blurred */
-.content {
-   text-align: center;
-    position: relative;
-    z-index: 1;
 }
 
 /* Additional CSS to make the overlaying content visible */
